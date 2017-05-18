@@ -1,0 +1,22 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col xs-12 col-sm-6 col-sm-offset-3">
+      <h1> Welcome on Mister Cocktail </h1>
+
+     <h3><%= link_to "ajouter un nouveau cocktail", new_cocktail_path %></h3>
+
+
+     <% @cocktails.each do |cocktail| %>
+        <h2><%= cocktail.name %></h2>
+        <%= link_to "Cocktail Page", cocktail_path(cocktail)%>  |
+        <%= link_to "Delete Cocktail", cocktail_path(cocktail)%>
+
+       <%end%>
+
+   </div>
+  </div>
+</div>
+
+
+
+
